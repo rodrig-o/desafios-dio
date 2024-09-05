@@ -1,4 +1,5 @@
-# depositar apenas valores positivos
+# criar um sistema bancário para controlar depósitos e saques
+# permitir depositar apenas valores positivos
 # gerar um relatório com o total de depósitos realizados
 # permitir 3 saques diários de até R$ 500,00 cada
 # gerar um relatório com o total de saques realizados
@@ -24,7 +25,7 @@ menu = ' M E N U '.center(40,"-") + """
 def extrato():
     print("\n")
     print(' E X T R A T O '.center(40,"#"))
-    print(extrato_completo)
+    print("Não há transação registrada." if not extrato_completo else extrato_completo)
     print(f"Seu saldo é de R$ {saldo:.2f}")
     print(f"Total de saques realizados hoje: {saques_realizados}")
     print(f"Data de emissão: {date.today()}")
